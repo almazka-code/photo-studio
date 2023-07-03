@@ -1,0 +1,126 @@
+.hidden {
+  @include visually-hidden;
+}
+
+.hero {
+  padding-top: 41px;
+  padding-bottom: 64px;
+
+  &__grid {
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(278px, 1fr));  
+    // grid-gap: $m30; 
+
+    @include grid(278px);
+  }
+
+  &__image {
+    @include image-position;        
+  }  
+
+  &__title {
+    @include title ($dark-grey);
+    line-height: 25px;
+    margin-bottom: 23px;
+  }
+
+  &__wrap {
+    height: 100%;
+  }
+
+  &__list {
+    display: grid;     
+    grid-template-columns: repeat(auto-fit, minmax(218px, 1fr));    
+    grid-template-rows: minmax(105px, auto);
+    grid-auto-flow: dense;   
+    grid-gap: $m30;     
+  }
+
+  &__item {     
+    line-height: 0;
+    font-size: 0px;
+  }
+
+  &__picture {
+    line-height: 0;
+    font-size: 0px;
+  }
+
+  &__item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  &__item:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  &__item:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }  
+
+  &__left {       
+    position: relative;   
+    
+
+    &::before {
+      content: '#мастеркласс';
+      @include before;
+      top: 15px;
+      right: 15px;
+    }
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: start;
+    position: absolute; 
+    right: 145px;   
+    left: 60px;
+    bottom: 60px;
+    height: 100%;       
+    color: $white;
+  }
+
+  &__text {
+    margin-bottom: 3px;
+    line-height: 19px;
+  }
+
+  &__name {
+    margin-bottom: 19px;
+    font-family: $TT-text;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 37px;
+  }        
+}
+    
+.btn {
+  min-width: 121px;
+  padding: 16px 22px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  background-color: $orange;
+  color: $white;
+  transition-property: border, background-color;
+  transition: 0.5s ease-in-out;
+
+    &:focus-visible {
+      outline: 0;
+      outline: 3px solid $dark-orange;  
+    }
+
+    &:hover:not(:focus-visible) {
+      background-color: $brown;  
+    }
+
+    &:active:not(:focus-visible) {      
+      background-color: $dark-orange;
+    }
+}  

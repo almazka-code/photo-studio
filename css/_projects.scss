@@ -1,0 +1,194 @@
+.projects {
+  padding-top: $m68;
+  padding-bottom: $m68;  
+
+  &__title {
+    @include title ($dark-grey);
+    margin-bottom: 12px;
+  }  
+
+  &__list {
+    @include grid(60px);
+    // display: grid;     
+    // grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); 
+    grid-template-rows: minmax(250px, auto);      
+    grid-auto-flow: dense;   
+    // grid-gap: $m30; 
+  }  
+
+  &__item {      
+    line-height: 0;
+    font-size: 0px;
+  }
+
+  &__item:nth-child(1) {
+    grid-column: span 2;     
+
+    .card__photo::before {
+      content: '#пейзаж';
+      @include before;   
+    }
+  }
+
+  &__item:nth-child(2) {
+    grid-column: span 2; 
+
+    .card__photo::before {
+      content: '#портрет';
+      @include before;   
+    }
+  }
+
+  &__item:nth-child(3) {
+    grid-column: span 2; 
+
+    .card__photo::before {
+      content: '#предмет';
+      @include before;   
+    }
+  }
+
+  &__item:nth-child(4) {
+    grid-column: span 6; 
+
+    .card__photo::before {
+      content: '#fuji';
+      @include before;   
+    }    
+  }
+
+  &__item:nth-child(5) {
+    grid-column: span 6; 
+
+    .card__photo::before {
+      content: '#проектзабвение';
+      @include before;   
+    }
+  }
+
+  &__item:nth-child(6) {
+    grid-column: span 3; 
+
+    .card__photo::before {
+      content: '#ретушь';
+      @include before;   
+    }
+  }
+
+  &__item:nth-child(7) {
+    grid-column: span 3; 
+
+    .card__photo::before {
+      content: '#портрет';
+      @include before;   
+    }
+  }  
+}
+
+.card {
+  position: relative;  
+  height: 100%;   
+
+  &__image {
+    @include image-position;
+    width: 100%;
+    margin-bottom: 15px;    
+  }  
+
+  &__image--large {
+    @include image-position;
+    width: 100%;
+    margin-bottom: 0;
+  }  
+
+  &__text {    
+    margin-bottom: 13px;  
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;   
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 22px;
+  }    
+
+  &__text--black {
+    color: $dark-grey
+  }
+
+  &__text--white {
+    max-width: 60%;
+    color: $white;
+  }
+
+  &__date {       
+    font-size: 12px;
+    line-height: 22px;
+    color: $light-grey;
+  }
+
+  &__date::before {
+    content: url(../images/calendar.svg);
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;    
+  }
+
+  &__photo {
+    position: relative;
+    height: 100%;
+  }  
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 22px;   
+    left: $m30;   
+    bottom: $m30;    
+  }
+
+  &__descr {    
+    .card__date {
+      margin-bottom: 6px;
+      color: $white;
+
+      &::before {
+        content: url(../images/calendar-white.svg);
+        width: 14px;
+        height: 14px;
+        margin-right: 6px;    
+      }
+    }
+  }
+
+  &__title {
+    @include title($white);
+    max-width: 40%;
+    margin-bottom: 6px;
+    line-height: 24px;
+  }  
+
+  &__button {
+    display: inline-block;
+    border: 3px solid $orange;
+    background-color: transparent;
+
+    &:focus-visible {
+      outline: 0;
+      outline: 3px solid $orange; 
+      background-color: $brown; 
+    }
+
+    &:hover:not(:focus-visible) {
+      background-color: $orange;  
+    }
+
+    &:active:not(:focus-visible) {  
+      outline: 0;
+      border: 3px solid $dark-orange;
+      background-color: $dark-orange;
+    }
+  }
+}
+

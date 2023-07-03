@@ -1,0 +1,166 @@
+@media (max-width: 992px) { 
+
+  .container {    
+    padding: 0 27px;  
+  }
+
+  .header-top {
+    &__container {      
+      padding: 27px 27px;    
+    }
+  }
+
+  .header-bottom {
+      background-color: $grey;
+    
+      &__container {
+        padding: 10px 27px;
+      }
+  }
+
+  .header {
+    &__nav {
+      position: static;  
+      transform: translateX(0);   
+    }
+  }  
+   
+  .search {
+    &__form--active {
+      transform: translate(-27px, -15px);     
+    }
+  }
+
+  .hero {
+    padding-top: 33px;
+
+    &__list {   
+      @include grid(156px);
+    }
+
+    &__title {
+      margin-bottom: 17px;
+      font-size: 22px;
+      line-height: 23px;      
+    }
+
+    &__name {
+      line-height: 30px;
+    }  
+    
+    &__text {
+      margin-bottom: 15px;
+    }
+  
+  }
+
+  .about {   
+    padding-bottom: 62px; 
+    
+    &__input {
+      width: 100%;
+    }
+  }
+
+  .projects {
+    &__list {
+      grid-template-columns: repeat(auto-fit, minmax(63px, 1fr)); 
+      grid-row: 25px;
+    }
+
+    &__item:nth-child(1) {
+      .card__text {
+        -webkit-line-clamp: 3;
+      }
+    }
+
+    &__item:nth-child(2) {
+    .card__text {
+      -webkit-line-clamp: 3;
+    }
+    }
+
+    &__item:nth-child(3) {
+      grid-column: span 2; 
+
+      .card__text {
+        -webkit-line-clamp: 3;
+      }
+    }
+
+    &__item:nth-child(4) {
+      grid-column: span 6;  
+      margin-bottom: 10px;     
+    }
+
+    &__item:nth-child(5) {
+      grid-column: span 6;   
+      order: 1;    
+    } 
+
+    &__item:nth-child(6) .card__text {
+      margin-bottom: 20px;        
+    } 
+
+    &__item:nth-child(7) .card__text {
+      margin-bottom: 20px;       
+    } 
+  }  
+  
+  .card {
+    &__text {
+      margin-bottom: 12px;
+    }
+
+    &__box {
+      bottom: 30px;
+    }
+  }
+
+  .contacts {
+
+    &__grid {     
+      @include grid(64px);
+    }
+   
+    &__left {        
+      grid-column: span 6;
+    }
+  }  
+
+  .address {
+    padding: 25px 248px 24px 30px;
+    &__tel {
+      display: block;
+    }
+  }
+
+  .form {
+    grid-column: span 4;
+  }
+
+  .footer {
+    &__text {
+      display: none;
+    }
+  }
+
+  .footer-bottom {    
+    &__container {      
+      padding: 30px 27px;
+    }
+  }
+
+  .footer-top {     
+    &__wrap {  
+      top: 26px;    
+      right: 27px;
+    }
+  }
+}
+
+
+
+
+
+ 

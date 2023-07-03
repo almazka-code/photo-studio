@@ -1,0 +1,377 @@
+@media (max-width: 767.98px) {
+  .body {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .container {    
+    padding: 0 21px;
+  }
+
+  .header-top {
+    &__container {
+      padding: 24px 21px;    
+    }
+  }
+
+  .logo {
+    max-width: 112px;
+    max-height: 18px;  
+  }
+
+  .search {
+    &__form--active {
+      transform: translate(-21px, -15px);     
+    }
+
+    &__svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &__form {
+      width: 278px;
+      height: 45px;
+      padding: 8px 13px 8px 13px;
+    }    
+  }
+
+  .header-bottom__container {
+    padding: 14px 21px;
+  }
+
+  // бургер меню
+  
+  .burger {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 18px; 
+    background-color: $grey;
+
+    &:focus-visible {
+      outline: 0;
+      outline-offset: 3px;
+      outline: 2px solid $orange;
+    }
+  }
+
+  .burger__line {
+    position: absolute;    
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: $white;   
+    
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+      width: 50%;
+      top: auto;  
+    }
+
+    &:nth-child(2) {
+      top: 50%;    
+      transform: translateY(-50%);
+    }
+  }
+ 
+  .header {
+    &__close {
+      display: block;
+      position: static;
+      margin-bottom: 16px;
+    }
+
+    &__nav {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      min-width: 230px;
+      height: 100vh;
+      z-index: 1000;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 14px 18px 36px 18px;    
+      background-color: $dark-grey;
+      overflow-y: auto; /*когда пункты меню перестанут помещаться в экран автоматически появится скролл*/
+      visibility: hidden;
+      transform: translateX(-120%);    
+      transition: visibility 0.3s ease, transform 0.3s ease;   
+      display: flex;  
+      flex-direction: column;  
+      justify-content: space-between;
+
+      .nav__list {
+        flex-direction: column;
+        align-items: flex-start;   
+      }
+
+      .nav__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: $m30;
+      }
+
+      .nav__link {
+        font-size: 16px;
+        line-height: 21px;    
+      }
+    }
+
+    &__tel {
+      display: block;
+      position: relative;    
+      padding-left: 15px;
+      font-family: $TT-text;
+      font-weight: 500;
+      font-style: normal;
+      color: $orange;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 15px;
+        height: 15px;   
+        background-image: url(../images/tel.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+  
+  .header__nav--active {
+    visibility: visible;
+    transform: none;
+  }
+
+  .stop-scroll {
+    overflow: hidden;
+  }
+
+  // окончание бургер меню
+  
+  .hero {    
+    padding-top: 30px; 
+    padding-bottom: 50px;
+
+    &__grid {
+      @include grid(252px);
+    }
+
+    &__list {   
+      @include grid(111px);
+    }
+
+    &__descr {
+      right: 40px;
+      bottom: 30px;
+      left: 30px;
+    }
+
+    &__left {   
+  
+      &::before {   
+        @include before-mobile;
+      }     
+    }
+    
+    &__text {
+      margin-bottom: 10px;      
+      line-height: 16px;
+    }
+
+    &__name {
+      margin-bottom: 14px;   
+      font-size: 24px;
+      line-height: 26px;
+    }
+
+    &__title { 
+      font-size: 18px;                     
+      line-height: 19px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .btn {
+    font-size: 14px;
+    line-height: 16px;
+    min-width: 109px;
+    padding: 12px 21px;    
+  }
+
+  .about {    
+    padding-top: 32px; 
+
+    &__title {
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    &__text {     
+      line-height: 25px;      
+    }      
+
+    &__image {      
+      margin-bottom: 30px;
+    }
+
+    &__input {          
+      padding: 11px 23px;
+      margin-right: 0;   
+    }
+  }
+
+  .form {
+    &__heading {
+      margin-bottom: 14px;    
+      font-size: 18px;  
+    }
+      
+  }
+
+  .projects {
+    padding-top: 50px;
+    padding-bottom: 50px; 
+    
+    &__title {
+      font-size: 18px;
+      line-height: 23px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .card {  
+  
+    &__image {
+      margin-bottom: 16px;
+    }
+
+    &__text {      
+      margin-bottom: 8px;  
+      font-size: 16px;
+      line-height: 22px;       
+    }    
+
+    &__button {
+      padding: 10px 18px;
+    }
+
+    &__descr {    
+      .card__date {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .card__text {        
+        line-height: 18px;
+      }
+    }
+
+    &__box {      
+      justify-content: flex-end;      
+    }
+  }
+
+  .card__text--white {
+    margin-bottom: 23px;  
+  }
+
+  .contacts {
+    margin-bottom: 48px;
+       
+    &__title {
+      padding: 0 21px;
+      margin-bottom: 14px;  
+      font-size: 18px;
+      line-height: 23px;        
+    }    
+  } 
+
+  .address {       
+    padding: 26px 34px 14px 18px;    
+
+    &__title {
+      margin-bottom: 10px;      
+      font-size: 18px;
+      line-height: 22px;      
+    }
+  
+    &__text {
+      display: block;
+      margin-bottom: 11px;       
+      line-height: 18px;     
+    }
+  
+    &__tel {      
+      padding-left: 20px;      
+      line-height: 18px;
+    }
+  }  
+
+  .form {     
+    &__title {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &__text {         
+      line-height: 18px;
+    }  
+
+    &__textarea {
+      height: 150px;
+      padding-bottom: 122px;    
+    }   
+  }
+
+  .footer-top {  
+
+    &__container {
+      padding: 31px 21px;      
+    }
+
+    &__wrap {
+      position: static;
+    }
+  }
+
+  .footer {  
+
+    &__more {
+      text-align: center;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &__label {
+      font-size: 10px;
+      line-height: 13px;
+    }
+  }
+
+  .footer-bottom {
+    background-color: $grey;
+    
+    &__container {   
+      padding: 14px 21px; 
+      display: flex;
+      flex-direction: column;    
+      align-items: center; 
+    }
+
+    &__wrap {
+      text-align: center;
+      margin-right: 0;
+    }
+  } 
+
+}

@@ -1,0 +1,12 @@
+@media (max-width: 375px) {
+  .hero { 
+    &__list {   
+      @include grid(124px);
+    }
+
+    &__item:nth-child(1) {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+  }
+}

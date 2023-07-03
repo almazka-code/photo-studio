@@ -1,0 +1,66 @@
+@mixin title ($title-color) {
+  font-family: $TT-text;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;  
+  color: $title-color;  
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin image-position {  
+  max-width: 100%; 
+  height: 100%;     
+  object-fit: cover;
+  object-position: center;   
+}
+
+@mixin before {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  min-width: 56px;
+  padding: 7px 14px;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: $dark-grey;
+  color: $white;
+}
+
+@mixin before-mobile {
+  top: 5px;
+  right: 5px;
+  min-width: 52px;
+  padding: 4px 14px;
+  font-size: 12px;
+  line-height: 14px;  
+}
+
+@mixin grid ($minval) {
+  display: grid;    
+  grid-template-columns: repeat(auto-fit, minmax($minval, 1fr)); 
+  grid-gap: $m30;  
+}
+
+@media (max-width: 576px) {
+  @mixin title ($title-color) {
+    font-size: 18px;
+    line-height: 23px;      
+  }
+}
+

@@ -1,0 +1,145 @@
+/* header */
+
+.header-top {
+  &__container {
+    position: relative; 
+    @include flex;     
+    padding: 26px 75px;       
+  }
+}
+
+.header {  
+  background-color: $dark-grey;  
+
+  &__close {
+    display: none;
+  }
+
+  &__tel {
+    display: none;
+  }   
+  
+  &__nav {
+    position: absolute;
+    top: 30px;     
+    left: 44%;
+    transform: translateX(-30%);   
+  }
+}
+
+.burger {
+  display: none;
+}
+
+.logo {
+  max-width: 190px;
+  max-height: 31px;  
+}
+
+.nav {
+  &__list {
+    @include flex;     
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 73px;     
+  }
+
+  &__link {
+    padding: 3px;    
+    font-family: $TT-text;
+    color: $white;
+    transition: color .5s ease-in-out;
+
+      &:focus-visible {
+        outline: 0;  
+        background-color: $brown;  
+      }
+
+      &:hover:not(:focus-visible) {
+        color: $orange;
+      }
+
+      &:active:not(:focus-visible) {
+        color: $dark-orange;
+      }
+  }
+}
+
+/* форма поиска  */
+
+.search {
+  display: inline-block;
+
+  &__svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  &__form {
+    @include flex; 
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    width: 342px;
+    height: 60px;
+    padding: 16px; 
+    opacity: 0;
+    background-color: $dark-grey;
+    visibility: hidden;  
+    transition-property: transform, opacity, visibility;  
+    transition: 0.3s ease;
+  }
+
+  &__form--active {
+    transform: translate(-75px, -15px);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__input {
+    width: 320px;
+    border: 0;
+    border-bottom: 1px solid $white;
+    background-color: $dark-grey;
+    transition: border-bottom 0.3s ease;
+
+    &::placeholder {
+      color: $white;
+    }
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      outline: 0;
+      border-bottom: 1px solid $orange;
+    }
+
+    &:focus::placeholder {
+      color: transparent;
+    }
+  }
+
+  &__btn:focus-visible,
+  &__close:focus-visible {
+    outline: 0;
+    outline-offset: 3px;
+    outline: 2px solid $orange;
+  }
+
+  &__btn path,
+  &__close rect {
+    transition: fill 0.3s ease;
+  }
+
+  &__btn:hover:not(:focus-visible) path,
+  &__btn:active:not(:focus-visible) path,
+  &__close:hover:not(:focus-visible) circle,
+  &__close:active:not(:focus-visible) circle {
+    fill: $orange;
+  }
+}
+
+
+
+

@@ -1,0 +1,178 @@
+@media (max-width: 575.98px) {
+  .hero {
+    &__image {
+      width: 100%;     
+    }
+
+    &__list {   
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 25px;
+    }
+
+    &__item:nth-child(1) {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
+
+  .about {
+    &__wrap {
+      grid-gap: 20px;
+    }
+
+    &__image {
+      width: 278px;
+      height: 278px;
+      margin-bottom: 3px;      
+    }
+
+    &__box {
+      margin-bottom: 26px;
+    }
+
+
+  }
+
+  .projects {
+    padding-bottom: 52px;
+
+    &__list {
+      @include grid(278px);
+      grid-gap: 25px;
+    }  
+
+    &__item:nth-child(1) {
+      grid-column: span 1;
+
+      .card__photo::before {       
+        @include before-mobile;   
+      }
+
+      .card__text {
+        -webkit-line-clamp: 2; 
+      }
+    }
+
+    &__item:nth-child(2) {
+      grid-column: span 1;
+
+      .card__photo::before {       
+        @include before-mobile;   
+      }
+
+      .card__text {
+        -webkit-line-clamp: 2; 
+      }
+    }
+
+    &__item:nth-child(3) {
+      grid-column: span 1;  
+      
+      .card__photo::before {       
+        @include before-mobile;   
+      }
+
+      .card__text {
+        -webkit-line-clamp: 2; 
+      }
+    }
+
+    &__item:nth-child(4) {
+      grid-column: span 1;  
+      
+      .card__photo::before {       
+        @include before-mobile;   
+      }      
+    }
+
+    &__item:nth-child(5) {
+      grid-column: span 1;   
+      order: 1;    
+
+      .card__photo::before {       
+        @include before-mobile;   
+      }      
+    } 
+
+    &__item:nth-child(6) {
+      grid-column: span 1;
+      
+      .card__photo::before {       
+        @include before-mobile;   
+      }      
+    } 
+
+    &__item:nth-child(7) {
+      grid-column: span 1;   
+      
+      .card__photo::before {       
+        @include before-mobile;   
+      }    
+    } 
+  }
+
+  .card {
+    &__box {
+      top: 196px;
+      right: $m30;
+      left: $m30;   
+      bottom: $m30;
+    }
+
+    &__text {
+      margin-bottom: 12px;
+    }
+
+    &__title {
+      margin-bottom: 13px;
+    }
+  }
+
+  .card__text--white {
+    max-width: 100%;   
+    margin-bottom: 15px;     
+    -webkit-line-clamp: 4;
+    
+  }
+
+  .contacts {
+
+    &__container {
+      padding: 0;
+    }
+
+    &__grid {     
+      grid-template-columns: repeat(auto-fit, minmax(278px, 1fr)); 
+      grid-gap: 25px;
+    }
+   
+    &__left {        
+      grid-column: span 1;
+      height: 472px;
+    }
+  }  
+
+  .address {
+    padding: 28px 34px 14px 18px;    
+  }
+
+  .map {    
+    height: 472px;
+  }
+  
+
+  .form {
+    padding: 0 21px;
+    grid-column: span 1;
+
+    &__input {
+      height: 40px;
+    }
+
+    &__textarea{
+      height: 150px;
+      padding-bottom: 122px;    
+    }
+  }
+  
+}

@@ -1,0 +1,220 @@
+@media (max-width: 1200px) { 
+
+  .container {    
+    padding: 0 31px;  
+  }
+
+  .header-top {
+    &__container {      
+      padding: 27px 31px;    
+    }
+  }   
+  
+  .header {
+    &__nav {      
+      left: 35%;
+      transform: translateX(-15%);   
+    }
+  }
+
+  .hero { 
+    padding-top: 30px;
+    padding-bottom: 68px;
+    
+    &__left {
+      line-height: 0;    
+    }    
+  }
+
+  .logo {
+    max-width: 166px;
+    max-height: 27px;   
+  }
+
+  .nav {
+    &__item:not(:last-child) {
+      margin-right: 27px; 
+    }
+  }
+
+  .search {
+    &__form--active {
+      transform: translate(-31px, -15px);     
+    }
+  }
+
+  .hero {
+    padding-top: 34px;    
+
+    &__descr {
+      right: 30px;   
+      left: 30px;
+      bottom: 30px;      
+    }
+
+    &__text {
+      margin-bottom: 9px;     
+    }  
+
+    &__name {
+      margin-bottom: 22px;
+      font-size: 34px;
+      line-height: 34px;
+    }
+
+    &__title {       
+      margin-bottom: 25px;
+    }
+  }
+
+  .about {
+    padding-bottom: 80px;
+
+    &__input {
+      width: 342px;
+      margin-bottom: 20px;
+    }    
+  }  
+
+  .form {  
+    &__wrap {
+      flex-direction: column;
+    }
+
+    &__btn {
+      max-width: max-content;
+    }
+  }   
+  
+  .projects {   
+    padding-bottom: 65px; 
+
+    &__list {
+      @include grid(90px);   
+      row-gap: 21px;      
+    }  
+
+    &__item:nth-child(1) {
+      .card__text {
+        -webkit-line-clamp: 2;
+        }
+    }
+
+    &__item:nth-child(2) {
+      .card__text {
+      -webkit-line-clamp: 2;
+      }
+    }
+
+    &__item:nth-child(3) {
+      grid-column: span 4; 
+
+      .card__text {
+        -webkit-line-clamp: 2;
+        }
+    }
+  
+    &__item:nth-child(4) {
+      grid-column: span 5;       
+    }
+  
+    &__item:nth-child(5) {
+      grid-column: span 5;   
+      order: 1;    
+    }    
+  }  
+
+
+  
+  .card {
+    line-height: 0;
+
+    &__image {
+      margin-bottom: 18px;
+    }
+
+    &__text {
+      margin-bottom: 19px;
+    }
+
+    &__button {      
+      padding: 12px 20px;
+    }
+
+    &__box {
+      top: 33px;
+      bottom: 37px;
+    }
+  }
+  
+  
+
+  .contacts {
+    margin-bottom: $m68;
+   
+    &__title {      
+      margin-bottom: 23px;
+    }  
+
+    &__grid {        
+      @include grid(80px);
+    }
+
+    &__left {      
+      grid-column: span 5;
+    }
+
+    &__address {
+      top: auto;      
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 34%;      
+    }
+  }
+
+  .address {
+    padding: 25px 245px 21px 30px;
+
+    &__text {
+      display: inline;
+    } 
+
+    &__tel {
+      display: inline-block;
+    }    
+  }
+
+  .form {   
+    grid-column: span 3; 
+  }
+
+  .footer {
+    &__text {     
+      margin-right: 200px;
+    }
+  }
+
+  .footer-bottom {    
+    &__container {        
+      padding: 23px 31px;
+    }
+  
+    &__wrap {
+      margin-right: 145px;
+    }
+  }
+
+  .footer-top { 
+  
+    &__wrap {      
+      right: 31px;
+    }
+  }
+
+}
+
+  
+
+  
